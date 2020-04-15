@@ -3,11 +3,17 @@
 <h2>Hello Monny!</h2>
 <h3>Another beautiful morning in Palm Springs!</h3>
 <p>This a the 1st paragraph in a meaningless story.</p>
-<p>Our raft server/node code made good progress today. Started
-  proxy handling</p>
-<p>The new stuff in Fleek is not obvious. Probably need to dive down a bit</p>
-<p>Looks like we need to change the process communication for raft
+<ul>
+  <li>Our raft server/node code made good progress today. Started
+  proxy handling</li>
+  <li>The new stuff in Fleek is not obvious. Probably need to dive down a bit</li>
+  <li>Looks like we need to change the process communication for raft
   to be asyncio queues with wait_for timeouts. See the async_tut_1
-  project. </p>
+  project. </li>
+  <li>Changed my mind on that last one. The nodes will now run as
+    subprocesses and use mp.Queues to implement the RPC.</li>
+  <li>Need to figure out what mechanism to use for 1) controlling
+    and stopping the servers and 2) issueing client reques</li>
+</ul>
 </body>
 </html>
