@@ -3,6 +3,15 @@
 <h2>Hello Monny!</h2>
 <h3>Another beautiful morning in Palm Springs!</h3>
 <p>This a the 1st paragraph in a meaningless story.</p>
+<h3>Big breakthrough!</h3>
+<p>There was somekind of a problem with using queues to communicate amoung the raft
+  servers. I had no problems with it in my test server program, but in the real one I ran
+into issues with stuff getting put into the wrong queues. I worked on this for a couple of days and was to able to get it resolved.</p>
+<p>Enter pipes. Finally I gave up on the queues and wrote a small server with
+  subprocesses and managed to get it to work successfully. I then updated raft_server
+  to use pipes in the same way instead of queues. It now works! The shutdown messages
+  are getting sent to the correct server! Yeah!
+<h3> Old notes</h3>
 <ul>
   <li>Our raft server/node code made good progress today. Started
   proxy handling</li>
